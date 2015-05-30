@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>coco.</title>
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "coco.css"/>
+    <script type = "text/javascript">
+        function kToLbs(pK) {
+    var nearExact = pK/0.45359237;
+    var lbs = Math.floor(nearExact);
+    return {
+        pounds: lbs,
+    };
+}
+function smartremark() {
+            var smartremark = document.getElementById("smartremark");
+            var random = Math.random();
+            var random3 = random * 12;
+            var random2 = Math.round(random3);
+            
+            if (random2 == 1) {
+                smartremark.innerHTML = "<h5>coco says hi. |</h5>";
+            }
+            else if (random2 == 2) {
+                smartremark.innerHTML = "<h5>coco is sleeping on top of her sister saffi. |</h5>";
+            }
+            else if (random2 == 3) {
+                smartremark.innerHTML = "<h5>coco and saffi are fighting over who gets to sleep on the running wheel. |</h5>";
+            }
+            else if (random2 == 4) {
+                smartremark.innerHTML = "<h5>coco is named after my dead pet rat, coco. |</h5>";
+            }
+            else if (random2 == 5) {
+                smartremark.innerHTML = "<h5>coco is stealing saffi's food. |</h5>";
+            }
+            else if (random2 == 6) {
+                smartremark.innerHTML = "<h5>coco is almost as fat as saffi. |</h5>";
+            }
+            else if (random2 == 7) {
+                smartremark.innerHTML = "<h5>coco is so cute. |</h5>";
+            }
+            else if (random2 == 8) {
+                smartremark.innerHTML = "<h5>coco is hungry. |</h5>";
+            }
+            else if (random2 == 9) {
+                smartremark.innerHTML = "<h5>NEWS: coco is struggling to get through the door. |</h5>"
+            }
+            else if (random2 == 10) {
+                smartremark.innerHTML = "<h5>today is coco day! |</h5>"
+            }
+            else if (random2 == 12) {
+                smartremark.innerHTML = "<h5>coco. is. BIG. |</h5>"
+            }
+            else if (random2 == 11) {
+                smartremark.innerHTML = "<h5>coco has been elected as queen. |</h5>"
+            }
+            else {
+                smartremark.innerHTML = "<h5>coco thinks you are friendly |</h5>";
+            }
+        }
+function go() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input = parseInt( document.getElementById("txtInput").value );
+    var imperial = kToLbs(input);
+    output.innerHTML += input + " kgs = " + imperial.pounds + " lbs";
+    smartremark();
+}
+   
+function lbsToK(imperial) {
+    var pounds = imperial.pounds;
+    return pounds * 0.45359237;
+}
+function go2() {
+    var input2 = parseInt( document.getElementById("txtInput").value );
+var output = document.getElementById("output");
+ var kg = lbsToK({ pounds: input2 });
+ output.innerHTML = input2 + " lbs = " + kg + " kgs.";
+ smartremark();
+}
+function kgToOz() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input3 = parseInt( document.getElementById("txtInput").value );
+    var kgtooz = input3 * 35.2740642;
+    output.innerHTML =  input3 + " kgs = " + kgtooz + " oz";
+    smartremark();
+}
+function ozToKg() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input4 = parseInt( document.getElementById("txtInput").value );
+    var oztokg = input4 / 352.738782;
+    output.innerHTML =  input4 + " oz = " + oztokg + " kgs";
+    smartremark();
+}
+function lbToOz() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input5 = parseInt( document.getElementById("txtInput").value );
+    var lbtooz = input5 * 16;
+    output.innerHTML =  input5 + " lb = " + lbtooz + " oz";
+    smartremark();
+}
+function ozToLb() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input6 = parseInt( document.getElementById("txtInput").value );
+    var oztolb = input6 / 16;
+    output.innerHTML =  input6 + " oz = " + oztolb + " lb";
+    smartremark();
+}
+function kgToSt() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input7 = parseInt( document.getElementById("txtInput").value );
+    var kgtost = input7 * 0.15747;
+    output.innerHTML =  input7 + " kg = " + kgtost + " st";
+    smartremark();
+}
+function stToKg() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input8 = parseInt( document.getElementById("txtInput").value );
+    var sttokg = input8 / 0.15747;
+    output.innerHTML =  input8 + " st = " + sttokg + " kg";
+    smartremark();
+}
+function lbToSt() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input9 = parseInt( document.getElementById("txtInput").value );
+    var lbtost = input9 * 0.071429;
+    output.innerHTML =  input9 + " lb = " + lbtost + " st";
+}
+function stToLb() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input10 = parseInt( document.getElementById("txtInput").value );
+    var sttolb = input10 / 0.071429;
+    output.innerHTML =  input10 + " st = " + sttolb + " lb";
+    smartremark();
+}
+function ozToSt() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input11 = parseInt( document.getElementById("txtInput").value );
+    var oztost = input11 * 0.0044643;
+    output.innerHTML =  input11 + " oz = " + oztost + " st";
+    smartremark();
+}
+function stToOz() {
+    var output = document.getElementById("output");
+    output.innerHTML = "";
+    var input12 = parseInt( document.getElementById("txtInput").value );
+    var sttooz = input12 / 0.0044643;
+    output.innerHTML =  input12 + " st = " + sttooz + " oz";
+    smartremark();
+}
+</script>
+</head>
+
+<body onload = "smartremark()">
+    <div id = "title">
+        <img src = "cocosquare.png" alt = "cocosquare" style="width: 23px; height: 23px;">
+    <h1>coco.</h1>
+    </div>
+    <div id = "bottominfo">
+    <h5>programmed by blake bain. |</h5>
+    <a href = "http://steamcommunity.com/id/blakebain1/">steam account</a>
+    <h5>|</h5>
+    <a href = "http://youtube.com/channel/UC-yuk3-FNDEkkKIQ_a-LS-w">youtube channel</a>
+    <h5>|</h5>
+    <a href = "http://stackoverflow.com/users/4907682/nachozombie">stack overflow account</a>
+    <h5>|</h5>
+    <a href = "https://github.com/blakenachozombie">github account</a>
+    <h5>|</h5>
+    <h5>the math used is 99.99% exact! |</h5>
+    <div id = "smartremark"><h5></h5></div>
+    </div>
+    <form>
+        <fieldset>
+            <label for = "txtInput"></label>
+            <input type = "text"
+                   id = "txtInput"/>
+            <button onclick = "go()"
+                    type = "button">
+                kg to lb
+            </button>
+            <button onclick = "go2()"
+                    type = "button">
+                lb to kg
+            </button>
+            <button onclick = "kgToOz()"
+                    type = "button">
+                kg to oz
+            </button>
+            <button onclick = "ozToKg()"
+                    type = "button">
+                oz to kg
+            </button>
+            <button onclick = "lbToOz()"
+                    type = "button">
+                lb to oz
+            </button>
+            <button onclick = "ozToLb()"
+                    type = "button">
+                oz to lb
+            </button>
+            <button onclick = "kgToSt()"
+                    type = "button">
+                kg to st
+            </button>
+            <button onclick = "stToKg()"
+                    type = "button">
+                st to kg
+            </button>
+            <button onclick = "lbToSt()"
+                    type = "button">
+                lb to st
+            </button>
+            <button onclick = "stToLb()"
+                    type = "button">
+                st to lb
+            </button>
+            <button onclick = "ozToSt()"
+                    type = "button">
+                oz to st
+            </button>
+            <button onclick = "stToOz()"
+                    type = "button">
+                st to oz
+            </button>
+                <div id = "output"></div>
+        </fieldset>
+    </form>
+    <p>coco will convert weight units for you.</p>
+</body>
+</html>
