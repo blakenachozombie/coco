@@ -10,7 +10,7 @@
     <script type = "text/javascript">
         function kToLbs(pK) {
     var nearExact = pK/0.45359237;
-    var lbs = Math.floor(nearExact);
+    var lbs = nearExact;
     return {
         pounds: lbs,
     };
@@ -85,7 +85,7 @@ function kgToOz() {
     var output = document.getElementById("output");
     output.innerHTML = "";
     var input3 = parseFloat( document.getElementById("txtInput").value );
-    var kgtooz = input3 * 35.2740642;
+    var kgtooz = input3 * 35.274;
     output.innerHTML =  input3 + " kgs = " + kgtooz + " oz";
     smartremark();
 }
@@ -93,7 +93,7 @@ function ozToKg() {
     var output = document.getElementById("output");
     output.innerHTML = "";
     var input4 = parseFloat( document.getElementById("txtInput").value );
-    var oztokg = input4 / 352.738782;
+    var oztokg = input4 / 35.274;
     output.innerHTML =  input4 + " oz = " + oztokg + " kgs";
     smartremark();
 }
