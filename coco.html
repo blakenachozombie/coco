@@ -3,14 +3,15 @@
 <html lang = "en-US">
 <head>
     <meta charset = "UTF-8">
-    <title>coco.</title>
+    <title>coco</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
     <link rel = "stylesheet"
           type = "text/css"
           href = "coco.css"/>
     <script type = "text/javascript">
         function kToLbs(pK) {
     var nearExact = pK/0.45359237;
-    var lbs = Math.floor(nearExact);
+    var lbs = nearExact;
     return {
         pounds: lbs,
     };
@@ -28,7 +29,7 @@ function smartremark() {
                 smartremark.innerHTML = "<h5>coco is sleeping on top of her sister saffi. |</h5>";
             }
             else if (random2 == 3) {
-                smartremark.innerHTML = "<h5>coco and saffi are fighting over who gets to sleep on the running wheel. |</h5>";
+                smartremark.innerHTML = "<h5>coco and saffi are fighting over who gets to eat the food. |</h5>";
             }
             else if (random2 == 4) {
                 smartremark.innerHTML = "<h5>coco is named after my dead pet rat, coco. |</h5>";
@@ -64,7 +65,7 @@ function smartremark() {
 function go() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input = parseInt( document.getElementById("txtInput").value );
+    var input = parseFloat( document.getElementById("txtInput").value );
     var imperial = kToLbs(input);
     output.innerHTML += input + " kgs = " + imperial.pounds + " lbs";
     smartremark();
@@ -75,7 +76,7 @@ function lbsToK(imperial) {
     return pounds * 0.45359237;
 }
 function go2() {
-    var input2 = parseInt( document.getElementById("txtInput").value );
+    var input2 = parseFloat( document.getElementById("txtInput").value );
 var output = document.getElementById("output");
  var kg = lbsToK({ pounds: input2 });
  output.innerHTML = input2 + " lbs = " + kg + " kgs.";
@@ -84,23 +85,23 @@ var output = document.getElementById("output");
 function kgToOz() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input3 = parseInt( document.getElementById("txtInput").value );
-    var kgtooz = input3 * 35.2740642;
+    var input3 = parseFloat( document.getElementById("txtInput").value );
+    var kgtooz = input3 * 35.274;
     output.innerHTML =  input3 + " kgs = " + kgtooz + " oz";
     smartremark();
 }
 function ozToKg() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input4 = parseInt( document.getElementById("txtInput").value );
-    var oztokg = input4 / 352.738782;
+    var input4 = parseFloat( document.getElementById("txtInput").value );
+    var oztokg = input4 / 35.274;
     output.innerHTML =  input4 + " oz = " + oztokg + " kgs";
     smartremark();
 }
 function lbToOz() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input5 = parseInt( document.getElementById("txtInput").value );
+    var input5 = parseFloat( document.getElementById("txtInput").value );
     var lbtooz = input5 * 16;
     output.innerHTML =  input5 + " lb = " + lbtooz + " oz";
     smartremark();
@@ -108,7 +109,7 @@ function lbToOz() {
 function ozToLb() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input6 = parseInt( document.getElementById("txtInput").value );
+    var input6 = parseFloat( document.getElementById("txtInput").value );
     var oztolb = input6 / 16;
     output.innerHTML =  input6 + " oz = " + oztolb + " lb";
     smartremark();
@@ -116,7 +117,7 @@ function ozToLb() {
 function kgToSt() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input7 = parseInt( document.getElementById("txtInput").value );
+    var input7 = parseFloat( document.getElementById("txtInput").value );
     var kgtost = input7 * 0.15747;
     output.innerHTML =  input7 + " kg = " + kgtost + " st";
     smartremark();
@@ -124,7 +125,7 @@ function kgToSt() {
 function stToKg() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input8 = parseInt( document.getElementById("txtInput").value );
+    var input8 = parseFloat( document.getElementById("txtInput").value );
     var sttokg = input8 / 0.15747;
     output.innerHTML =  input8 + " st = " + sttokg + " kg";
     smartremark();
@@ -132,14 +133,14 @@ function stToKg() {
 function lbToSt() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input9 = parseInt( document.getElementById("txtInput").value );
+    var input9 = parseFloat( document.getElementById("txtInput").value );
     var lbtost = input9 * 0.071429;
     output.innerHTML =  input9 + " lb = " + lbtost + " st";
 }
 function stToLb() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input10 = parseInt( document.getElementById("txtInput").value );
+    var input10 = parseFloat( document.getElementById("txtInput").value );
     var sttolb = input10 / 0.071429;
     output.innerHTML =  input10 + " st = " + sttolb + " lb";
     smartremark();
@@ -147,7 +148,7 @@ function stToLb() {
 function ozToSt() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input11 = parseInt( document.getElementById("txtInput").value );
+    var input11 = parseFloat( document.getElementById("txtInput").value );
     var oztost = input11 * 0.0044643;
     output.innerHTML =  input11 + " oz = " + oztost + " st";
     smartremark();
@@ -155,7 +156,7 @@ function ozToSt() {
 function stToOz() {
     var output = document.getElementById("output");
     output.innerHTML = "";
-    var input12 = parseInt( document.getElementById("txtInput").value );
+    var input12 = parseFloat( document.getElementById("txtInput").value );
     var sttooz = input12 / 0.0044643;
     output.innerHTML =  input12 + " st = " + sttooz + " oz";
     smartremark();
@@ -165,7 +166,7 @@ function stToOz() {
 
 <body onload = "smartremark()">
     <div id = "title">
-        <img src = "cocosquare.png" alt = "cocosquare" style="width: 23px; height: 23px;">
+        <img src = "cocosquare.png" alt = "coco." style="width: 23px; height: 23px;">
     <h1>coco.</h1>
     </div>
     <div id = "bottominfo">
